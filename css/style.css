@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    background-color: #e8f0f9;    
+}
+@font-face {
+  font-family:GILSANUB ;
+  src: url(../font/SCRIPTBL.TTF);
+}
+
+.navbar{
+ background: white;
+ box-shadow:white;
+}
+.nav-link{
+  transition: 1s all;
+    padding: 10px;
+    margin-right: 10px;
+      
+}
+.nav-link:hover{
+    color: white;
+    background: #0F3460;
+    border-radius: 12px;
+    padding: 10px;
+    transform: translateY(-1px);
+    text-align: center;
+}
+.corps{
+   background: url(../img/image2.jpg);
+   height: 100vh;
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+
+}
+.transparent{
+   background: rgb(20 15 15 / 42%);
+   height: 100%;
+   color: white;
+   
+}
+.titre{
+  font-size: 136px !important;   
+  font-family:GILSANUB ;
+  color:#ff9670;
+}
+u{   
+  color:#ff9670;
+}
+a{   
+  text-decoration: none;
+  color:#ff4d0c;
+}
+.titre1{   
+  font-family:GILSANUB ;
+}
+.titre2{   
+  font-family:GILSANUB ;
+  color: #FF6B35;
+}
+.paddign{
+  padding-top: 19%;   
+}
+.btn-button{
+  background:#FF6B35; 
+  color: white;  
+}
+.btn-button:hover{
+  border:solid 3px #FF6B35;
+  color: white;  
+}
+.image{
+  height: 100%;
+  width: 100%; 
+  border-radius: 30px;
+}
+.color{
+    background: #16213E;
+    color: white;
+}
+
+.icon{
+  font-size: 30px !important;
+  border-radius: 100px;
+  background:#3730a3;
+  padding: 20px;
+}
+.icon2{
+  color: #FF6B35;
+}
+.icon3{
+  color: #FF6B35;
+    font-size: 400px !important;
+}
+.icon4{
+  color: #FF6B35;
+    font-size: 50px !important;
+}
+.card-box{
+ padding: 20px;
+ border-radius: 40px;
+ background: #FF6B35;
+ color: white;
+ transition: all 0.5s ease;
+}
+.card-box:hover{
+ padding: 20px;
+ border-radius: 40px;
+ background: #16213E;
+ color: white;
+ transform: translateY(20px);
+}
+html{
+ scroll-behavior: smooth;
+}
+#Accuei{
+  padding: 3px 0;
+  scroll-margin-top: 50px;
+}
+#voir-notre-site{
+  padding: 3px 0;
+  scroll-margin-top: 50px;
+}
+#qui-nous-sommes-nous{
+  padding: 3px 0;
+  scroll-margin-top: 50px;
+}
+#service{
+  padding: 3px 0;
+  scroll-margin-top: 20px;
+}
+#contact{
+  padding: 3px 0;
+  scroll-margin-top: 30px;
+}
+.image{
+ transition: all 0.5s ease;
+}
+.image:hover{
+transform: translateY(-10px);
+}
