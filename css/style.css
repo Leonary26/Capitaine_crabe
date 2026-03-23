@@ -1,141 +1,167 @@
-body{
-    margin: 0;
-    background-color: #e8f0f9;    
+/* Reset & body */
+body {
+  margin: 0;
+  background-color: #e8f0f9;
+  font-family: 'GILSANUB', sans-serif;
 }
+
+/* Police personnalisée */
 @font-face {
-  font-family:GILSANUB ;
+  font-family: GILSANUB;
   src: url(../font/SCRIPTBL.TTF);
 }
 
-.navbar{
- background: white;
- box-shadow:white;
+/* Navbar */
+.navbar {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.nav-link{
-  transition: 1s all;
-    padding: 10px;
-    margin-right: 10px;
-      
+.nav-link {
+  transition: 0.3s all;
+  padding: 10px;
+  margin-right: 10px;
 }
-.nav-link:hover{
-    color: white;
-    background: #0F3460;
-    border-radius: 12px;
-    padding: 10px;
-    transform: translateY(-1px);
-    text-align: center;
+.nav-link:hover {
+  color: white;
+  background: #0F3460;
+  border-radius: 12px;
+  transform: translateY(-1px);
+  text-align: center;
 }
-.corps{
-   background: url(../img/image2.jpg);
-   height: 100vh;
-   background-repeat: no-repeat;
-   background-size: cover;
-   width: 100%;
 
+/* Section Accueil */
+.corps {
+  position: relative; /* pour overlay transparent */
+  background: url(../img/image2.jpg) center/cover no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
-.transparent{
-   background: rgb(20 15 15 / 42%);
-   height: 100%;
-   color: white;
-   
-}
-.titre{
-  font-size: 136px !important;   
-  font-family:GILSANUB ;
-  color:#ff9670;
-}
-u{   
-  color:#ff9670;
-}
-a{   
-  text-decoration: none;
-  color:#ff4d0c;
-}
-.titre1{   
-  font-family:GILSANUB ;
-}
-.titre2{   
-  font-family:GILSANUB ;
-  color: #FF6B35;
-}
-.paddign{
-  padding-top: 19%;   
-}
-.btn-button{
-  background:#FF6B35; 
-  color: white;  
-}
-.btn-button:hover{
-  border:solid 3px #FF6B35;
-  color: white;  
-}
-.image{
+
+.transparent {
+  position: absolute; /* overlay sur toute l'image */
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  width: 100%; 
-  border-radius: 30px;
-}
-.color{
-    background: #16213E;
-    color: white;
+  background: rgba(20, 15, 15, 0.42);
+  color: white;
+  display: flex;
+  flex-direction: column; /* empile le contenu verticalement */
+  align-items: flex-start; /* alignement gauche, tu peux mettre center si tu veux */
+  justify-content: center; /* centre verticalement */
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
-.icon{
-  font-size: 30px !important;
-  border-radius: 100px;
-  background:#3730a3;
-  padding: 20px;
+/* Titres */
+.titre {
+  font-size: clamp(2.8rem, 10vw, 9rem);
+  color: #ff9670;
 }
-.icon2{
+.titre1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+.titre2 {
+  font-size: clamp(1.3rem, 3vw, 2rem);
   color: #FF6B35;
 }
-.icon3{
-  color: #FF6B35;
-    font-size: 400px !important;
+u { color: #ff9670; }
+
+/* Liens et boutons */
+a { text-decoration: none; color: #ff4d0c; }
+.btn-button {
+  background: #FF6B35;
+  color: white;
+  transition: 0.3s all;
 }
-.icon4{
-  color: #FF6B35;
-    font-size: 50px !important;
+.btn-button:hover {
+  border: 3px solid #FF6B35;
+  color: white;
+  transform: translateY(-3px);
 }
-.card-box{
- padding: 20px;
- border-radius: 40px;
- background: #FF6B35;
- color: white;
- transition: all 0.5s ease;
+
+/* Padding Accueil */
+.paddign {
+  padding-top: clamp(50px, 15vw, 150px);
 }
-.card-box:hover{
- padding: 20px;
- border-radius: 40px;
- background: #16213E;
- color: white;
- transform: translateY(20px);
+
+/* Images */
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  transition: all 0.5s ease;
 }
-html{
- scroll-behavior: smooth;
+.image:hover {
+  transform: translateY(-10px);
 }
-#Accuei{
+
+/* Background colors */
+.color {
+  background: #16213E;
+  color: white;
+}
+
+/* Icônes */
+.icon {
+  font-size: clamp(20px, 5vw, 30px);
+  border-radius: 50%;
+  background: #3730a3;
+  padding: 15px;
+}
+.icon2 { color: #FF6B35; }
+.icon3 { font-size: clamp(100px, 20vw, 400px); color: #FF6B35; }
+.icon4 { font-size: clamp(20px, 5vw, 50px); color: #FF6B35; }
+
+/* Cards */
+.card-box {
+  padding: clamp(10px, 2vw, 20px);
+  border-radius: 40px;
+  background: #FF6B35;
+  color: white;
+  transition: all 0.5s ease;
+}
+.card-box:hover {
+  background: #16213E;
+  transform: translateY(10px);
+}
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Sections scroll margin */
+#Accuei, #voir-notre-site, #qui-nous-sommes-nous, #service, #contact {
   padding: 3px 0;
   scroll-margin-top: 50px;
 }
-#voir-notre-site{
-  padding: 3px 0;
-  scroll-margin-top: 50px;
+
+/* Responsive Media Queries */
+@media (max-width: 991px) {
+  /* Navbar mobile background */
+  .navbar-collapse {
+    background: white;
+    padding: 10px;
+  }
+  /* Titles smaller */
+  .titre { font-size: clamp(2rem, 8vw, 5rem); }
+  .titre1 { font-size: clamp(1.3rem, 4vw, 2.5rem); }
+  .titre2 { font-size: clamp(1rem, 3vw, 1.8rem); }
+  /* Cards stacking */
+  .card-box { margin-bottom: 20px; }
 }
-#qui-nous-sommes-nous{
-  padding: 3px 0;
-  scroll-margin-top: 50px;
+
+@media (max-width: 767px) {
+  .paddign { padding-top: clamp(40px, 12vw, 100px); }
+  .icon3 { font-size: clamp(80px, 15vw, 200px); }
+  .icon4 { font-size: clamp(15px, 4vw, 40px); }
+  .transparent { padding: 1.5rem; } /* moins de padding sur mobile */
 }
-#service{
-  padding: 3px 0;
-  scroll-margin-top: 20px;
-}
-#contact{
-  padding: 3px 0;
-  scroll-margin-top: 30px;
-}
-.image{
- transition: all 0.5s ease;
-}
-.image:hover{
-transform: translateY(-10px);
+
+@media (max-width: 575px) {
+  .corps { padding: 1rem; }
+  .card-box { padding: 10px; }
+  .image { border-radius: 20px; }
+  .transparent { align-items: center; text-align: center; } /* centre le contenu sur très petit écran */
 }
